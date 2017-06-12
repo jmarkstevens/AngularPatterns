@@ -1,0 +1,22 @@
+{
+  "name": "AngularPatterns",
+  "version": "1.0.1",
+  "description": "A collection of simple Angular 1 and 2 projects providing reusable components, startup and test examples.",
+  "license": "MIT",
+  "author": {
+    "name": "J Mark Stevens",
+    "email": "jmstevens@jmarkstevens.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmarkstevens/AngularPatterns.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jmarkstevens/AngularPatterns/issues"
+  },
+  "keywords": [
+    "angular",
+    "patterns",
+    "redux"
+  ]
+}

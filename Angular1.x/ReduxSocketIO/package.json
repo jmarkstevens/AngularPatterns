@@ -1,0 +1,43 @@
+{
+  "name": "AngularPatterns.1x-BasicRedux",
+  "version": "1.0.0",
+  "description": "A collection of simple angular projects providing reusable components, startup and test examples.",
+  "license": "MIT",
+  "author": {
+    "name": "J Mark Stevens",
+    "email": "jmstevens@jmarkstevens.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmarkstevens/ReactPatterns.git"
+  },
+  "scripts": {
+    "start": "node js/server.js",
+    "test": "mocha __tests__/.setup.js __tests__/**/*.test.js?",
+    "testw": "npm test -- --watch",
+    "ww": "webpack --progress --profile --colors --env.noMinimize --watch",
+    "nw": "webpack --progress --profile --colors --env.noMinimize"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "express": "latest",
+    "serve-favicon": "latest",
+    "socket.io": "latest"
+  },
+  "devDependencies": {
+    "angular": "^1.5.3",
+    "babel-core": "latest",
+    "babel-loader": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-stage-0": "latest",
+    "css-loader": "latest",
+    "extract-text-webpack-plugin": "latest",
+    "file-loader": "latest",
+    "loader-utils": "latest",
+    "ng-redux": "latest",
+    "redux": "latest",
+    "redux-logger": "latest",
+    "style-loader": "latest",
+    "webpack": "latest"
+  }
+}

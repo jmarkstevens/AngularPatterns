@@ -1,0 +1,6 @@
+{
+  "lib": [
+    "redux",
+    "redux-logger"
+  ]
+}

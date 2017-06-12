@@ -1,0 +1,10 @@
+{
+  "lib": [
+    "angular",
+    "ng-redux",
+    "redux",
+    "redux-logger",
+    "redux-thunk",
+    "whatwg-fetch"
+  ]
+}
