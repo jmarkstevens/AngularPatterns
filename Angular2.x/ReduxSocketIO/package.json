@@ -1,5 +1,5 @@
 {
-  "name": "AngularPatterns.2x-Basic",
+  "name": "AngularPatterns.2x-ReduxSocketIO",
   "version": "1.0.0",
   "description": "A collection of simple angular projects providing reusable components, startup and test examples.",
   "license": "MIT",
@@ -17,8 +17,10 @@
     "nw": "webpack --progress --profile --colors --env.noMinimize"
   },
   "dependencies": {
+    "body-parser": "latest",
     "express": "latest",
-    "serve-favicon": "latest"
+    "serve-favicon": "latest",
+    "socket.io": "latest"
   },
   "devDependencies": {
     "@angular-redux/store": "latest",

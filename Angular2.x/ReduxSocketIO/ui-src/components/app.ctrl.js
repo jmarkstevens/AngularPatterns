@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, ChangeDetectorRef} from '@angular/core';
 import {NgRedux} from '@angular-redux/store';
+
+import {apiSetData1} from '../store/api.Actions';
 
 let ctrlTemplate = `
   <div class="hiDiv" [ngClass]="[divName]">
@@ -14,6 +16,8 @@ let ctrlTemplate = `
     </div>
     <br />
   </div>
+  <br />
+  <br />
   <app-child *ngIf="show"></app-child>
   `;
 
@@ -27,32 +31,33 @@ const inLine = [
 @Component({
   selector: 'app-ctrl',
   template: ctrlTemplate,
-  styles: inLine,
-  host: {'(onDestroy)': 'onDestroy()'}
+  styles: inLine
 })
-export class AppCtrl {
-  constructor(ngRedux) {
+export class AppCtrl implements OnDestroy {
+  constructor(changeDetectorRef, ngRedux) {
+    this.changeDetectorRef = changeDetectorRef;
     this.ngRedux = ngRedux;
     this.data1 = this.ngRedux.getState().data1;
-    this.unsubscribe = ngRedux.subscribe(this.mapStateToThis);
+    this.unsubscribe = this.ngRedux.subscribe(this.subscribeToRedux1);
     this.divName = 'loDiv';
-    this.show = false;
+    this.show = true;
   }
   changeIt = () => {
     let data = {
-      name: 'Hello Redux',
+      name: 'Hello Parent after dispatch',
       setDateTime: new Date().toLocaleString()
     };
-    this.ngRedux.dispatch({type: 'GetData1Done', payload: data});
+    this.ngRedux.dispatch(apiSetData1(data));
     this.divName = this.divName === 'loDiv' ? 'newDiv' : 'loDiv';
   };
 
-  onDestroy() {
+  ngOnDestroy() {
     this.unsubscribe();
   }
 
-  mapStateToThis = () => {
+  subscribeToRedux1 = () => {
     this.data1 = this.ngRedux.getState().data1;
+    this.changeDetectorRef.detectChanges();
   };
 }
-AppCtrl.parameters = [[NgRedux]];
+AppCtrl.parameters = [[ChangeDetectorRef],[NgRedux]];

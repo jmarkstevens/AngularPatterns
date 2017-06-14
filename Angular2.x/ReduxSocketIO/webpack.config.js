@@ -9,7 +9,7 @@ module.exports = (env) => {
   var plugins = [];
 
   plugins.push(new ExtractTextPlugin({filename: 'app.css', allChunks: true}));
-  plugins.push(new webpack.optimize.CommonsChunkPlugin({name: 'lib'}));
+  plugins.push(new webpack.optimize.CommonsChunkPlugin({names: ['lib', 'vendor']}));
   if (noMinimize) {
     plugins.push(new webpack.DefinePlugin({'process.env': {NODE_ENV: JSON.stringify('development')}}));
   } else {
@@ -26,7 +26,8 @@ module.exports = (env) => {
     context: SRC_PATH,
     entry: {
       app: './app.js',
-      lib: configJson.lib
+      lib: configJson.lib,
+      vendor: './vendor.js',
     },
 
     output: {

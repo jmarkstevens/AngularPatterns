@@ -1,6 +1,6 @@
-# AngularPatterns Basic Redux
+# AngularPatterns Redux SocketIO
 
-Just the basics for Angular 2.x and Redux.
+Just the basics for Angular 2.x, Redux and SocketIO.
 
 # Getting started
 
