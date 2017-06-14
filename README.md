@@ -16,6 +16,7 @@ This is something of a React approach to Angular.
 **Angular 2.x**
 *  Basic
 *  Basic Redux
+*  Redux Fetch
 
 # The basics
 
