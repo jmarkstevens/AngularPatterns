@@ -33,11 +33,11 @@ export class MapPage implements OnDestroy, OnInit {
   constructor(changeDetectorRef, ngRedux) {
     this.changeDetectorRef = changeDetectorRef;
     this.ngRedux = ngRedux;
-    this.mapState = this.ngRedux.getState().mapState;
-    this.unsubscribe = this.ngRedux.subscribe(this.subscribeMapPageRedux);
     this.map = {};
     this.markers = [];
     this.mapStyle = 'MapPage';
+    this.mapState = this.ngRedux.getState().mapState;
+    this.unsubscribe = this.ngRedux.subscribe(this.subscribeMapPageRedux);
   }
 
   setMarkers = newMarkers => {

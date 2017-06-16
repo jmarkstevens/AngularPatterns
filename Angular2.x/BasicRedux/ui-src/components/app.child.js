@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NgRedux} from '@angular-redux/store';
+import {NgRedux, select} from '@angular-redux/store';
 
 let ctrlTemplate = `
   <div class="hiDiv" [ngClass]="[divName]">
@@ -22,8 +22,9 @@ const inLine = ['.hiDiv {text-align: center;}', '.loDiv {color: orange;}', '.new
 export class AppChild {
   constructor(ngRedux) {
     this.ngRedux = ngRedux;
-    this.data2 = this.ngRedux.getState().data2;
+    // this.data2 = this.ngRedux.getState().data2;
     this.unsubscribe = ngRedux.subscribe(this.mapStateToThis);
+    this.mapStateToThis();
     this.divName = 'loDiv';
   }
   changeIt = () => {
@@ -33,6 +34,7 @@ export class AppChild {
     };
     this.ngRedux.dispatch({type: 'GetData2Done', payload: data});
     this.divName = this.divName === 'loDiv' ? 'newDiv' : 'loDiv';
+    console.log('this.state: ', this.state);
   };
 
   onDestroy() {

@@ -3,8 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const configJson = require('./webpack.config.json');
 
-module.exports = (env) => {
-
+module.exports = env => {
   const noMinimize = env.noMinimize;
   var plugins = [];
 
@@ -16,18 +15,18 @@ module.exports = (env) => {
     plugins.push(new webpack.DefinePlugin({'process.env': {NODE_ENV: JSON.stringify('production')}}));
     plugins.push(new webpack.optimize.UglifyJsPlugin({include: /lib\.js/, minimize: true}));
   }
+  plugins.push(new webpack.ContextReplacementPlugin(/angular(\\|\/)core(\\|\/)@angular/, './src', {}));
 
   const ROOT_PATH = path.resolve(__dirname);
   const SRC_PATH = path.resolve(ROOT_PATH, './ui-src');
   const DIST_PATH = path.resolve(ROOT_PATH, './ui-dist');
-
 
   return {
     context: SRC_PATH,
     entry: {
       app: './app.js',
       lib: configJson.lib,
-      vendor: './vendor.js',
+      vendor: './vendor.js'
     },
 
     output: {
@@ -42,9 +41,9 @@ module.exports = (env) => {
           loader: 'babel-loader',
           query: {
             plugins: ['transform-decorators-legacy'],
-            presets:['angular2', 'es2015', 'stage-0']
+            presets: ['angular2', 'es2015', 'stage-0']
           },
-          exclude: /(node_modules)/,
+          exclude: /(node_modules)/
         },
         {
           test: /\.css$/,
@@ -65,7 +64,10 @@ module.exports = (env) => {
     },
     plugins,
     resolve: {
-      extensions: ['.js'],
+      extensions: ['.js', '.ts'],
+      modules: ['node_modules']
+    },
+    resolveLoader: {
       modules: ['node_modules']
     }
   };

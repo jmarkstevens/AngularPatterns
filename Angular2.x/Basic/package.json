@@ -12,7 +12,7 @@
     "url": "git+https://github.com/jmarkstevens/AngularPatterns.git"
   },
   "scripts": {
-    "start": "nodemon js/server.js",
+    "start": "nodemon --watch js js/server.js",
     "ww": "webpack --progress --profile --colors --env.noMinimize --watch",
     "nw": "webpack --progress --profile --colors --env.noMinimize"
   },
