@@ -1,0 +1,17 @@
+<div class="AppCtrl">
+  <nav-bar></nav-bar>
+  <div [ngSwitch]="currentPage">
+    <angular-core-page *ngSwitchCase="'AngularCorePage'"></angular-core-page>
+    <button-page *ngSwitchCase="'ButtonPage'"></button-page>
+    <drop-down-page *ngSwitchCase="'DropDownPage'"></drop-down-page>
+    <gallery-page *ngSwitchCase="'GalleryPage'"></gallery-page>
+    <input-page *ngSwitchCase="'InputPage'"></input-page>
+    <list-page *ngSwitchCase="'ListPage'"></list-page>
+    <page-indicator-page *ngSwitchCase="'PageIndicatorPage'"></page-indicator-page>
+    <progress-bar-page *ngSwitchCase="'ProgressBarPage'"></progress-bar-page>
+    <slider-page *ngSwitchCase="'SliderPage'"></slider-page>
+    <tooltip-page *ngSwitchCase="'TooltipPage'"></tooltip-page>
+    <tree-menu-page *ngSwitchCase="'TreeMenuPage'"></tree-menu-page>
+    <tree-view-page *ngSwitchCase="'TreeViewPage'"></tree-view-page>
+  </div>
+</div>

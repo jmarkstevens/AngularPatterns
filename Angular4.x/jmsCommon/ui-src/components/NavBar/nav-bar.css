@@ -1,0 +1,31 @@
+.NavBar {
+  background: #fefefe;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 1em;
+  overflow: hidden;
+  padding: 0px 3em;
+}
+
+.navSpan {
+  cursor: pointer;
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'sans-serif';
+  font-size: 2em;
+  font-weight: 500;
+  display: inline-block;
+  margin: 0 1em;
+  white-space: pre;
+}
+
+.navSpan:hover {
+  opacity: 0.9;
+}
+
+.standardSpan {
+  color: #363636;
+}
+
+.selectedSpan {
+  color: #d18b1f;
+}

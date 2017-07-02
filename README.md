@@ -13,10 +13,11 @@ This is something of a React approach to Angular.
 *  Redux Fetch
 *  Redux SocketIO
 
-**Angular 2.x**
+**Angular 4.x**
 *  Basic
 *  Basic Redux
 *  Google Maps
+*  jsmCommon
 *  Redux Fetch
 *  Redux SocketIO
 

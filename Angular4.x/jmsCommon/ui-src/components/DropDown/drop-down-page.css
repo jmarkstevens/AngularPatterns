@@ -1,0 +1,15 @@
+.DropDownsSty {
+  border-bottom: 3px solid #636b46;
+  padding: 10px;
+}
+
+.DropColumn {
+  padding: 20px;
+  width: 33%;
+}
+
+.ColumnsSty {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}

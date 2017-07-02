@@ -1,0 +1,15 @@
+<div class="hiDiv" [ngClass]="[divName]">
+  <h1>{{data1.name}}</h1>
+  <h2>{{data1.setDateTime}}</h2>
+  <div (click)="changeIt()">Click here to change</div>
+  <br />
+  <div>
+    <div class="btnDiv">
+      <button (click)="show = !show">{{show ? 'hide' : 'show'}} child component</button>
+    </div>
+  </div>
+  <br />
+</div>
+<br />
+<br />
+<app-child *ngIf="show"></app-child>
