@@ -27,6 +27,7 @@ export class InputPage {
     this.ngRedux = ngRedux;
     this.unsubscribe = this.ngRedux.subscribe(this.subscribeToRedux);
     this.subscribeToRedux(1);
+    this.textInput1.style = inputs.customStyle;
   }
 
   ngOnDestroy() {

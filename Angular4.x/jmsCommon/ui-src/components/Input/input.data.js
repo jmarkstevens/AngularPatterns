@@ -61,5 +61,9 @@ export const inputs = {
     type: 'radio',
     radioValue: 'key',
     value: false
+  },
+  customStyle: {
+    'background-color': 'maroon',
+    color: 'white'
   }
 };
