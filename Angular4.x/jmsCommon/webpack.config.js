@@ -56,7 +56,7 @@ module.exports = env => {
         },
         {
           test: /\.css$/,
-          exclude: [path.resolve(__dirname, 'ui-src/components')],
+          exclude: [path.resolve(__dirname, 'ui-src/components'), path.resolve(__dirname, 'ui-src/common')],
           use: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: 'css-loader'
@@ -64,7 +64,7 @@ module.exports = env => {
         },
         {
           test: /\.css$/,
-          include: [path.resolve(__dirname, 'ui-src/components')],
+          include: [path.resolve(__dirname, 'ui-src/components'), path.resolve(__dirname, 'ui-src/common')],
           loader: 'raw-loader'
         },
         {

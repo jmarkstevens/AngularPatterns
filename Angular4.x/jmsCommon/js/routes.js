@@ -13,17 +13,17 @@ router.get('/getPicList', function(req, res) {
 
 router.get('/getAppData', function(req, res) {
   const getDataDone = function(data){ res.send(data); };
-  getSetData.getAppData('AppData', getDataDone);
+  getSetData.getData('AppData', getDataDone);
 });
 
 router.get('/getImageList', function(req, res) {
   const getDataDone = function(data){ res.send(data); };
-  getSetData.getImageList('ImageList', getDataDone);
+  getSetData.getData('ImageList', getDataDone);
 });
 
 router.get('/getTreeView', function(req, res) {
   const getDataDone = function(data){ res.send(data); };
-  getSetData.getTreeView('TreeView', getDataDone);
+  getSetData.getData('TreeView', getDataDone);
 });
 
 router.post('/setAppData', function(req) { getSetData.setAppData('AppData', req.body); });
@@ -31,11 +31,11 @@ router.post('/setTreeView', function(req) { getSetData.setTreeView('TreeView', r
 
 router.get('/getInputData', function(req, res) {
   const getDataDone = function(data){ res.send(data); };
-  getSetData.getInputData('inputs', getDataDone);
+  getSetData.getData('inputs', getDataDone);
 });
 
 router.post('/setInputData', function(req) {
-  getSetData.setInputData('inputs', req.body);
+  getSetData.setData('inputs', req.body, null);
 });
 
 module.exports = router;

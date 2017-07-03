@@ -20,7 +20,7 @@ module.exports.setData = function(fileName, data, doneCallBack) {
   const filePath = `${rootDataPath}/${fileName}.json`;
   const writeFileCallBack = function (err) {
     if (err) doneCallBack({message: 'Data writeFile error', filePath});
-    doneCallBack({setResponse: 'ok'});
+    if (doneCallBack) doneCallBack({setResponse: 'ok'});
   };
   fs.writeFile(filePath, JSON.stringify(data, null, 2), writeFileCallBack);
 };

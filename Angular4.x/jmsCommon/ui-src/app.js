@@ -27,8 +27,12 @@ import {store} from './store/App.Store';
 import {apiGetAppData, apiGetImageList, apiGetTreeView, apiGetInputData, apiGetPicList} from './store/api/api.Actions';
 
 @NgModule({
-  imports: [BrowserModule, NgReduxModule, SharedModule],
-  declarations: [AppComponent, COMMON_DECLARATIONS, APP_DECLARATIONS],
+  imports: [
+    BrowserModule, NgReduxModule, SharedModule
+  ],
+  declarations: [
+    AppComponent, COMMON_DECLARATIONS, APP_DECLARATIONS
+  ],
   bootstrap: [AppComponent]
 })
 class AppModule {
@@ -37,12 +41,14 @@ class AppModule {
     this.ngRedux.provideStore(store);
   }
 }
-AppModule.parameters = [[NgRedux]];
+AppModule.parameters = [
+  [NgRedux]
+];
 
 // store.dispatch(apiGetAppData());
 // store.dispatch(apiGetImageList());
 // store.dispatch(apiGetTreeView());
-// store.dispatch(apiGetInputData());
+store.dispatch(apiGetInputData());
 store.dispatch(apiGetPicList());
 
 platformBrowserDynamic().bootstrapModule(AppModule);

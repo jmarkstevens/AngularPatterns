@@ -6,6 +6,7 @@ const setData = (inputCopy) => { apiSetInputData(inputCopy); };
 const onEditRecord = (inputCopy, field, value) => {
   switch (field) {
     case 'text': inputCopy.text = value; break;
+    case 'text-focus': inputCopy.textFocus = value; break;
     case 'checkbox': inputCopy.checkbox = value; break;
     case 'radioGroup': inputCopy.radioGroup = value; break;
     case 'color': inputCopy.color = value; break;
@@ -19,6 +20,7 @@ const onEditRecord = (inputCopy, field, value) => {
 
 const initialState = {
   'text': '',
+  'textFocus': '',
   'checkbox': false,
   'radioGroup': '',
   'color': '#ffffff',

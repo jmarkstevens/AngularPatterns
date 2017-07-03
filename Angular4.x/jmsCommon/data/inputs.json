@@ -1,9 +1,10 @@
 {
-  "text": "this is a text input",
+  "text": "regular text some",
+  "textFocus": "edited focused",
   "checkbox": true,
-  "radioGroup": "setkey",
-  "color": "#546d53",
-  "number": "20",
-  "range": "70",
-  "folder": "C:\\fakepath\\_1020715.JPG"
+  "radioGroup": "set",
+  "color": "#671c79",
+  "number": "31",
+  "range": "75",
+  "folder": "C:\\fakepath\\JMarkStevensResume5.docx"
 }

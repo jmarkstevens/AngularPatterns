@@ -1,4 +1,45 @@
 <div class="rootDiv">
-  <h1>{{title}}</h1>
-  <jms-input></jms-input>
+  <div class="inputDiv">
+    Plain text input<br />
+    <jms-input [input]="textInput1" (onValueChanged)="onValueChanged($event, textInput1)"></jms-input>
+    Saved text: {{textInput1.value}}
+  </div>
+  <div class="inputDiv">
+    Text input with focus<br />
+    <jms-input [input]="textInput2" (onValueChanged)="onValueChanged($event, textInput2)"></jms-input>
+    Saved text: {{textInput2.value}}
+  </div>
+  <div class="inputDiv">
+    Checkbox input<br />
+    <jms-input [input]="checkInput1" (onValueChanged)="onValueChanged($event, checkInput1)"></jms-input>
+    Saved value: {{checkInput1.value && 'True' || 'False'}}
+  </div>
+  <div class="inputDiv">
+    Color input<br />
+    <jms-input [input]="colorInput" (onValueChanged)="onValueChanged($event, colorInput)"></jms-input>
+    Saved value: {{colorInput.value}}
+  </div>
+  <div class="inputDiv">
+    File input<br />
+    <jms-input [input]="fileInput" (onValueChanged)="onValueChanged($event, fileInput)"></jms-input>
+    Saved value: {{fileInput.value}}
+  </div>
+  <div class="inputDiv">
+    Number input<br />
+    <jms-input [input]="numberInput" (onValueChanged)="onValueChanged($event, numberInput)"></jms-input>
+    Saved value: {{numberInput.value}}
+  </div>
+  <div class="inputDiv">
+    Range input<br />
+    <jms-input [input]="rangeInput" (onValueChanged)="onValueChanged($event, rangeInput)"></jms-input>
+    Saved value: {{rangeInput.value}}
+  </div>
+  <br />
+  <div class="inputDiv">
+    Radio input<br />
+    Set: <jms-input [input]="radioInput1" (onValueChanged)="onValueChanged($event, radioInput1)"></jms-input>
+    SetKey: <jms-input [input]="radioInput2" (onValueChanged)="onValueChanged($event, radioInput2)"></jms-input>
+    Key: <jms-input [input]="radioInput3" (onValueChanged)="onValueChanged($event, radioInput3)"></jms-input>
+    Saved value: {{radioValue}}
+  </div>
 </div>
