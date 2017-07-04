@@ -7,22 +7,9 @@ import {listData} from './list.data';
   styles: [require('./list-page.css')]
 })
 export class ListPage {
-  listData1 = {};
-  listData2 = {};
-  listData3 = {};
-  listData4 = {};
-  listData5 = {};
-  constructor() {
-    this.listData1.list = listData.list;
-    this.listData2.list = listData.list;
-    this.listData2.rootStyle = listData.listSty;
-    this.listData3.list = listData.list;
-    this.listData3.lineStyle = listData.lineSty;
-    this.listData4.list = listData.list;
-    this.listData4.type = 'span';
-    this.listData5.type = 'span';
-    this.listData5.rootStyle = listData.listSty;
-    this.listData5.list = listData.list;
-    this.listData5.lineStyle = listData.lineSty;
-  }
+  listData1 = listData.listData1;
+  listData2 = listData.listData2;
+  listData3 = listData.listData3;
+  listData4 = listData.listData4;
+  listData5 = listData.listData5;
 }
