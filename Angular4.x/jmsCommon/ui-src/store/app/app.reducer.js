@@ -1,6 +1,14 @@
-const pages = ['AngularCorePage', 'ButtonPage', 'DropDownPage', 'GalleryPage', 'InputPage', 'ListPage'];
+const pages = [
+  'AngularCorePage',
+  'ButtonPage',
+  'DropDownPage',
+  'GalleryPage',
+  'InputPage',
+  'ListPage',
+  'PageIndicatorPage'
+];
 const initialAppState = {
-  currentPage: pages[5]
+  currentPage: pages[6]
 };
 
 export default function handleActions(state = initialAppState, action) {

@@ -1,4 +1,4 @@
 <div class="rootDiv">
-  <h1>{{title}}</h1>
-  <jms-page-indicator></jms-page-indicator>
+  <h1>Current index: {{outData.currentIndex}}</h1>
+  <jms-page-indicator [inData]="outData" (onValueChanged)="onValueChanged($event)"></jms-page-indicator>
 </div>

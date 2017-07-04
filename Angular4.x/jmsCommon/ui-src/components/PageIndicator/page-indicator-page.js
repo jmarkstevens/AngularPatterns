@@ -8,7 +8,9 @@ const title = 'Hello page-indicator-page';
   styles: [require('./page-indicator-page.css')]
 })
 export class PageIndicatorPage {
-  constructor() {
-    this.title = title;
-  }
+  outData = {count: 3, currentIndex: 0};
+
+  onValueChanged = newValue => {
+    this.outData.currentIndex = newValue;
+  };
 }
