@@ -1,6 +1,4 @@
-import {Component} from '@angular/core';
-
-const title = 'Hello jms-list';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'jms-list',
@@ -8,7 +6,5 @@ const title = 'Hello jms-list';
   styles: [require('./jms-list.css')]
 })
 export class jmsList {
-  constructor() {
-    this.title = title;
-  }
+  @Input() inData = {};
 }

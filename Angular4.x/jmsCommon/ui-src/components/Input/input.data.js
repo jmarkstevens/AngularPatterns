@@ -63,7 +63,7 @@ export const inputs = {
     value: false
   },
   customStyle: {
-    'background-color': 'maroon',
+    'background-color': '#032',
     color: 'white'
   }
 };
