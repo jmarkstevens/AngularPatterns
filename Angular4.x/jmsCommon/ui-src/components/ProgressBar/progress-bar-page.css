@@ -1,1 +1,12 @@
-.rootDiv {color: yellow; text-align: center;}
+.rootDiv {
+  color: PeachPuff;
+  margin: 10px auto;
+  max-width: 1366px;
+  text-align: left;
+}
+
+.spacerSpanSty {
+  margin: 0 10px;
+}
+
+.btnDiv {text-align: center;}

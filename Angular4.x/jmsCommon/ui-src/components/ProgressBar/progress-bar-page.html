@@ -1,4 +1,36 @@
 <div class="rootDiv">
-  <h1>{{title}}</h1>
-  <jms-progress-bar></jms-progress-bar>
+  Default:<br />
+  <jms-progress-bar [inData]="outData1" [index]="progressIndex"></jms-progress-bar>
+  <br />
+  Default and indexColor:<br />
+  <jms-progress-bar [inData]="outData2" [index]="progressIndex"></jms-progress-bar>
+  <br />
+  Default and countColor:<br />
+  <jms-progress-bar [inData]="outData3" [index]="progressIndex"></jms-progress-bar>
+  <br />
+  Default and height: .8<br />
+  <jms-progress-bar [inData]="outData4" [index]="progressIndex"></jms-progress-bar>
+  <br />
+  Default and position: after<br />
+  <jms-progress-bar [inData]="outData5" [index]="progressIndex"></jms-progress-bar>
+  <br />
+  Default and position: before<br />
+  <jms-progress-bar [inData]="outData6" [index]="progressIndex"></jms-progress-bar>
+  <br />
+  Default and position: beforenafter<br />
+  <jms-progress-bar [inData]="outData7" [index]="progressIndex"></jms-progress-bar>
+  <br />
+  Default and position: none<br />
+  <jms-progress-bar [inData]="outData8" [index]="progressIndex"></jms-progress-bar>
+  <br /><br /><br />
+  <div id="btnDiv" class="btnDiv">
+    {{progressIndex}}<br /><br />
+    <jms-button [btn]="firstItemBtn" (onBtnClicked)="clickHandler(firstItemBtn)"></jms-button>
+    <span class="spacerSpanSty">&nbsp;</span>
+    <jms-button [btn]="previousItemBtn" (onBtnClicked)="clickHandler(previousItemBtn)"></jms-button>
+    <span class="spacerSpanSty">&nbsp;</span>
+    <jms-button [btn]="nextItemBtn" (onBtnClicked)="clickHandler(nextItemBtn)"></jms-button>
+    <span class="spacerSpanSty">&nbsp;</span>
+    <jms-button [btn]="lastItemBtn" (onBtnClicked)="clickHandler(lastItemBtn)"></jms-button>
+  </div>
 </div>

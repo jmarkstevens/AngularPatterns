@@ -5,10 +5,11 @@ const pages = [
   'GalleryPage',
   'InputPage',
   'ListPage',
-  'PageIndicatorPage'
+  'PageIndicatorPage',
+  'ProgressBarPage'
 ];
 const initialAppState = {
-  currentPage: pages[6]
+  currentPage: pages[7]
 };
 
 export default function handleActions(state = initialAppState, action) {
