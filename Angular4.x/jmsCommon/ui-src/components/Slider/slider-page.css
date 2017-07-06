@@ -1,1 +1,9 @@
-.rootDiv {color: yellow; text-align: center;}
+.rootDiv {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  max-width: 1366px;
+}
+.sliderStyle {
+  width: 400px;
+}

@@ -6,10 +6,11 @@ const pages = [
   'InputPage',
   'ListPage',
   'PageIndicatorPage',
-  'ProgressBarPage'
+  'ProgressBarPage',
+  'SliderPage'
 ];
 const initialAppState = {
-  currentPage: pages[7]
+  currentPage: pages[8]
 };
 
 export default function handleActions(state = initialAppState, action) {

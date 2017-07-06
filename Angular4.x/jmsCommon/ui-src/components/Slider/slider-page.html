@@ -1,5 +1,16 @@
 <div class="rootDiv">
-  <h1>{{title}}</h1>
-  <jms-range-slider></jms-range-slider>
-  <jms-single-slider></jms-single-slider>
+  <jms-range-slider
+    class="sliderStyle"
+    [inData]="outData1"
+    [lowIndex]="lowIndex"
+    [highIndex]="highIndex"
+    (onLowChanged)="onLowChanged($event)"
+    (onHighChanged)="onHighChanged($event)"
+  ></jms-range-slider>
+  <jms-single-slider
+    class="sliderStyle"
+    [inData]="outData1"
+    [index]="singleIndex"
+    (onValueChanged)="onSingleChanged($event)"
+  ></jms-single-slider>
 </div>
