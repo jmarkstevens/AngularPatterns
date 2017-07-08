@@ -11,7 +11,6 @@ import {jmsPageIndicator} from './PageIndicator/jms-page-indicator';
 import {jmsProgressBar} from './ProgressBar/jms-progress-bar';
 import {jmsRangeSlider} from './RangeSlider/jms-range-slider';
 import {jmsSingleSlider} from './SingleSlider/jms-single-slider';
-import {jmsTooltip} from './Tooltip/jms-tooltip';
 import {jmsTreeMenu} from './TreeMenu/jms-tree-menu';
 import {jmsTreeView} from './TreeView/jms-tree-view';
 
@@ -28,7 +27,6 @@ export const COMMON_DECLARATIONS = [
   jmsProgressBar,
   jmsRangeSlider,
   jmsSingleSlider,
-  jmsTooltip,
   jmsTreeMenu,
   jmsTreeView
 ];

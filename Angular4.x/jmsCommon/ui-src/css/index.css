@@ -36,6 +36,8 @@
   display: block
 }
 
+[hidden] { display: none !important;}
+
 .FlexBox {
   display: -webkit-box;
   display: -moz-box;

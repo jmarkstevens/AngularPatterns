@@ -16,9 +16,9 @@ import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {NgReduxModule, NgRedux} from '@angular-redux/store';
 import {SharedModule} from './shared/shared.module';
+import {CommonModule} from './common/common.module';
 
 import {APP_DECLARATIONS} from './components/app.declarations';
-import {COMMON_DECLARATIONS} from './common/common.declarations';
 
 import {AppComponent} from './components/app-component';
 
@@ -28,10 +28,10 @@ import {apiGetAppData, apiGetImageList, apiGetTreeView, apiGetInputData, apiGetP
 
 @NgModule({
   imports: [
-    BrowserModule, NgReduxModule, SharedModule
+    BrowserModule, CommonModule, NgReduxModule, SharedModule
   ],
   declarations: [
-    AppComponent, COMMON_DECLARATIONS, APP_DECLARATIONS
+    AppComponent, APP_DECLARATIONS
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,15 @@
-<div class="rootDiv">
-  <h1>{{title}}</h1>
-  <jms-tooltip></jms-tooltip>
+<div id="Tooltip" class="contentPage Tooltip">
+  <br /><br /><br />
+  <div id="column" class="column">
+    <div id="titleLine" *ngFor="let item of hoverValues" class="titleLine">
+      <div id="toolTip" class="toolTip">
+        <jms-tooltip [inData]="item" [adjust]="adjust"></jms-tooltip>
+      </div>
+      <div id="titleDiv" class="titleDiv">
+        <div id="title" class="title">
+          {{item.title}}:
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

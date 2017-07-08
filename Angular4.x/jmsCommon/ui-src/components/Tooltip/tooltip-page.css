@@ -1,1 +1,41 @@
-.rootDiv {color: yellow; text-align: center;}
+.Tooltip {
+  border-bottom: 3px solid #636b46;
+  padding: 0 10px;
+}
+
+.column {
+  height: calc(100% - 10px);
+  overflow: auto;
+  padding-left: 0px;
+  width: 330px;
+}
+
+.titleLine {
+  display: flex;
+  line-height: 1.5em;
+}
+
+.title {
+  background: transparent;
+  box-sizing: border-box;
+  cursor: default;
+  height: 18px;
+  line-height: 18px;
+  overflow: hidden;
+  outline: none;
+  position: relative;
+  text-align: left;
+  transition: all 200ms ease;
+  width: 100%;
+}
+
+.toolTip {
+  display: inline-block;
+  z-index: 100;
+}
+
+.titleDiv {
+  display: inline-block;
+  line-height: 18px;
+  position: relative;
+}

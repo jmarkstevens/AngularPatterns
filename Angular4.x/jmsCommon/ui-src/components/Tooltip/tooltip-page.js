@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 
-const title = 'Hello tooltip-page';
+import {hoverValues} from './tooltip.data';
 
 @Component({
   selector: 'tooltip-page',
@@ -8,7 +8,6 @@ const title = 'Hello tooltip-page';
   styles: [require('./tooltip-page.css')]
 })
 export class TooltipPage {
-  constructor() {
-    this.title = title;
-  }
+  hoverValues = hoverValues;
+  adjust = {left: 0, top: 94};
 }
