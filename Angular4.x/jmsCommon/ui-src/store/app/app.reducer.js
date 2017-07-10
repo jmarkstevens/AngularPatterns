@@ -8,10 +8,11 @@ const pages = [
   'PageIndicatorPage',
   'ProgressBarPage',
   'SliderPage',
-  'TooltipPage'
+  'TooltipPage',
+  'TreeMenuPage'
 ];
 const initialAppState = {
-  currentPage: pages[9]
+  currentPage: pages[10]
 };
 
 export default function handleActions(state = initialAppState, action) {

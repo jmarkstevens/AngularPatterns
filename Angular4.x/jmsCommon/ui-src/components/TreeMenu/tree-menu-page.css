@@ -1,1 +1,6 @@
-.rootDiv {color: yellow; text-align: center;}
+.rootDiv {
+  color: gold;
+  margin: 20px auto;
+  max-width: 1366px;
+  text-align: left;
+}

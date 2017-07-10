@@ -46,7 +46,7 @@ AppModule.parameters = [
 ];
 
 // store.dispatch(apiGetAppData());
-// store.dispatch(apiGetImageList());
+store.dispatch(apiGetImageList());
 // store.dispatch(apiGetTreeView());
 store.dispatch(apiGetInputData());
 store.dispatch(apiGetPicList());

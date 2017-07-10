@@ -176,7 +176,7 @@ const initialState = {
   currentTreeNode: {title: 'not selected'},
   showTreeEdit: false,
   showTreeNew: false,
-  jumpList: [{}]
+  menuList: [{}]
 };
 
 export default function handleActions(state = initialState, action) {
@@ -184,7 +184,7 @@ export default function handleActions(state = initialState, action) {
   let currentCopy = Object.assign({}, state.currentTreeNode);
   switch (action.type) {
     case 'GetAppDataDone': _nextID = action.payload; return state;
-    case 'GetImageListDone': return {...state, jumpList: action.payload};
+    case 'GetImageListDone': return {...state, menuList: action.payload};
     case 'GetTreeViewDone': {
       let gotTreeData = _gotTreeView(action.payload);
       return {...state, ...gotTreeData};
