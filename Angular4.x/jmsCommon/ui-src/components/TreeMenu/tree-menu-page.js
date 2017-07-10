@@ -30,7 +30,8 @@ export class TreeMenuPage implements OnDestroy {
   
   subscribeToState = first => {
     this.menuList = this.ngRedux.getState().treeState.menuList;
-    if (!first) this.changeDetectorRef.detectChanges();
+    let isCurrentPage = this.ngRedux.getState().appState.currentPage === 'TreeMenuPage';
+    if (!first && isCurrentPage) this.changeDetectorRef.detectChanges();
   }
 }
 TreeMenuPage.parameters = [[ChangeDetectorRef], [NgRedux]];

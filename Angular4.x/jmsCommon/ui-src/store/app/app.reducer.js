@@ -12,7 +12,7 @@ const pages = [
   'TreeMenuPage'
 ];
 const initialAppState = {
-  currentPage: pages[10]
+  currentPage: pages[4]
 };
 
 export default function handleActions(state = initialAppState, action) {

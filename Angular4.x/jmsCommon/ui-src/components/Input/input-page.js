@@ -25,8 +25,8 @@ export class InputPage {
   constructor(changeDetectorRef, ngRedux) {
     this.changeDetectorRef = changeDetectorRef;
     this.ngRedux = ngRedux;
-    this.unsubscribe = this.ngRedux.subscribe(this.subscribeToRedux);
-    this.subscribeToRedux(1);
+    this.unsubscribe = this.ngRedux.subscribe(this.subscribeToState);
+    this.subscribeToState(1);
     this.textInput1.style = inputs.customStyle;
   }
 
@@ -42,9 +42,10 @@ export class InputPage {
     this.ngRedux.dispatch(editRecord(name, value));
   }
 
-  subscribeToRedux = first => {
+  subscribeToState = first => {
     this.inputState = this.ngRedux.getState().inputState;
-    if (!first) {
+    let isCurrentPage = this.ngRedux.getState().appState.currentPage === 'InputPage';
+    if (!first && isCurrentPage) {
       this.changeDetectorRef.detectChanges();
       this.setData();
     }
