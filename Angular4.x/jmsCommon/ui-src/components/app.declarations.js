@@ -11,13 +11,9 @@ import {PageIndicatorPage} from './PageIndicator/page-indicator-page';
 import {ProgressBarPage} from './ProgressBar/progress-bar-page';
 import {SliderPage} from './Slider/slider-page';
 import {TooltipPage} from './Tooltip/tooltip-page';
-import {TreeMenuPage} from './TreeMenu/tree-menu-page';
+import {TreeMenu} from './TreeView/menu/tree-menu';
 import {TreeViewPage} from './TreeView/tree-view-page';
 import {TreeViewActions} from './TreeView/actions/tv-actions';
-import {TreeViewDetail} from './TreeView/detail/tv-detail';
-import {TreeViewEdit} from './TreeView/edit/tv-edit';
-import {TreeViewList} from './TreeView/list/tv-list';
-import {TreeViewNew} from './TreeView/new/tv-new';
 
 import {NavBar} from './NavBar/nav-bar';
 
@@ -35,12 +31,8 @@ export const APP_DECLARATIONS = [
   ProgressBarPage,
   SliderPage,
   TooltipPage,
-  TreeMenuPage,
+  TreeMenu,
   TreeViewPage,
   TreeViewActions,
-  TreeViewDetail,
-  TreeViewEdit,
-  TreeViewList,
-  TreeViewNew,
   NavBar
 ];

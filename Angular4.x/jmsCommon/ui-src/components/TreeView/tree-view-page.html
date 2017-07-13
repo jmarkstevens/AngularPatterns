@@ -1,8 +1,18 @@
 <div class="rootDiv">
-  <h1>{{title}}</h1>
-  <tv-actions></tv-actions>
-  <tv-detail></tv-detail>
-  <tv-edit></tv-edit>
-  <tv-list></tv-list>
-  <tv-new></tv-new>
+  <div id="complexExample" class="treeColumns">
+    Selected item title: {{currentItem.title}}
+    <br /><br />
+    <tv-actions [currentItem]="currentItem"></tv-actions>
+    <br /><br />
+    <jms-tree-view
+      [treeList]="treeList"
+      [iconOptions]="iconOptions"
+      [tvState]="tvState"
+      [titleColors]="titleColors"
+      (onItemSelected)="onItemSelected($event)">
+    </jms-tree-view>
+  </div>
+  <div id="simpleExample" class="treeColumns">
+    <tree-menu></tree-menu>
+  </div>
 </div>

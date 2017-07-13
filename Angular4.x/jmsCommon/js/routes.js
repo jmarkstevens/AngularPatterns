@@ -26,8 +26,14 @@ router.get('/getTreeView', function(req, res) {
   getSetData.getData('TreeView', getDataDone);
 });
 
-router.post('/setAppData', function(req) { getSetData.setAppData('AppData', req.body); });
-router.post('/setTreeView', function(req) { getSetData.setTreeView('TreeView', req.body); });
+router.get('/getTreeViewState', function(req, res) {
+  const getDataDone = function(data){ res.send(data); };
+  getSetData.getData('TreeViewState', getDataDone);
+});
+
+router.post('/setAppData', function(req) { getSetData.setData('AppData', req.body); });
+router.post('/setTreeView', function(req) { getSetData.setData('TreeView', req.body); });
+router.post('/setTreeViewState', function(req) { getSetData.setData('TreeViewState', req.body); });
 
 router.get('/getInputData', function(req, res) {
   const getDataDone = function(data){ res.send(data); };

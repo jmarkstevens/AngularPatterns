@@ -6,7 +6,7 @@
         {{item.title}}
       </div>
     </div>
-    <div id="childrenDiv" class="childrenDiv" *ngIf="item.itemVisible">
+    <div id="childrenDiv" class="childrenDiv" *ngIf="item.showChildren">
       <ng-container *ngTemplateOutlet="menuTree; context:{$implicit: item.children}"></ng-container>
     </div>
   </div>

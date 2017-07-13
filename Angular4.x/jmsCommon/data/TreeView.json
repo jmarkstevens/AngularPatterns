@@ -44,7 +44,7 @@
         "type": "dev"
       }
     ],
-    "closed": true,
+    "showChildren": 1,
     "nodeid": "1",
     "selected": false,
     "title": "Dev",
@@ -54,23 +54,16 @@
     "children": [
       {
         "children": [],
-        "nodeid": "22.45",
-        "selected": false,
-        "title": "Lightroom",
-        "type": "dev"
-      },
-      {
-        "children": [],
-        "nodeid": "22.39",
-        "selected": false,
-        "title": "react .14 findDOMNode",
-        "type": "dev"
-      },
-      {
-        "children": [],
         "nodeid": "22.24",
         "selected": false,
         "title": "Clippets",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "22.45",
+        "selected": false,
+        "title": "Lightroom",
         "type": "dev"
       },
       {
@@ -82,6 +75,12 @@
       },
       {
         "children": [
+          {
+            "nodeid": "22.32.77",
+            "children": [],
+            "title": "React Patterns child edit test",
+            "type": "dev"
+          },
           {
             "children": [],
             "nodeid": "22.32.55",
@@ -132,7 +131,7 @@
             "type": "dev"
           }
         ],
-        "closed": false,
+        "showChildren": 1,
         "nodeid": "22.32",
         "selected": false,
         "title": "React Patterns",
@@ -146,7 +145,7 @@
         "type": "dev"
       }
     ],
-    "closed": false,
+    "showChildren": 1,
     "nodeid": "22",
     "selected": false,
     "title": "Dev project todo's",
@@ -162,7 +161,7 @@
         "type": "sys"
       }
     ],
-    "closed": false,
+    "showChildren": 1,
     "nodeid": "7",
     "selected": false,
     "title": "Internet",
@@ -192,7 +191,7 @@
         "type": "dev"
       }
     ],
-    "closed": false,
+    "showChildren": 1,
     "nodeid": "27",
     "selected": false,
     "title": "JMStevens GitHub",
@@ -257,7 +256,7 @@
         "type": "dev"
       }
     ],
-    "closed": false,
+    "showChildren": 1,
     "nodeid": "12",
     "selected": false,
     "title": "Deployment",
@@ -272,6 +271,12 @@
             "nodeid": "53.59.75",
             "selected": false,
             "title": "Common",
+            "type": "dev"
+          },
+          {
+            "nodeid": "53.59.78",
+            "children": [],
+            "title": "Online projects child edit test",
             "type": "dev"
           },
           {
@@ -380,14 +385,14 @@
             "type": "dev"
           }
         ],
-        "closed": false,
+        "showChildren": 1,
         "nodeid": "53.59",
         "selected": false,
         "title": "Online projects",
         "type": "dev"
       }
     ],
-    "closed": false,
+    "showChildren": 1,
     "nodeid": "53",
     "selected": false,
     "title": "Kykas Consulting",
@@ -410,7 +415,7 @@
         "type": "sys"
       }
     ],
-    "closed": false,
+    "showChildren": 1,
     "nodeid": "19",
     "selected": false,
     "title": "Mac",
@@ -440,7 +445,7 @@
         "type": "home"
       }
     ],
-    "closed": false,
+    "showChildren": 1,
     "nodeid": "10",
     "selected": false,
     "title": "Matadham",
@@ -463,7 +468,7 @@
         "type": "sys"
       }
     ],
-    "closed": false,
+    "showChildren": 1,
     "nodeid": "26",
     "selected": false,
     "title": "Windows 8.1",

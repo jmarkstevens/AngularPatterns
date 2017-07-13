@@ -7,28 +7,29 @@ import {ChangeDetectorRef, Component, EventEmitter, Input, Output} from '@angula
 })
 export class jmsTreeMenu {
   @Input()menuList = [{}];
-  @Input()level = '';
-  @Input()icons = [''];
-  @Output()onIndexChanged = new EventEmitter();
+  @Input()iconOptions = {};
+  @Output()onItemSelected = new EventEmitter();
+  @Output()onShowChildren = new EventEmitter();
 
   constructor(changeDetectorRef) {
     this.changeDetectorRef = changeDetectorRef;
   }
   iconClick = item => {
-    if (item.children) {
-      item.itemVisible = !item.itemVisible;
+    if (item.children && item.children.length > 0) {
+      item.showChildren = item.showChildren ? 0 : 1;
+      this.onShowChildren.emit(item);
       this.changeDetectorRef.detectChanges();
     } else {
       this.titleClick(item);
     }
   }
   titleClick = item => {
-    this.onIndexChanged.emit(item);
+    this.onItemSelected.emit(item);
   }
   getIconBack = item => {
-    if (item.children) {
-      let level = item[this.level] - 1;
-      let iconBack = this.icons[level];
+    if (item.children && item.children.length > 0) {
+      let icon = item[this.iconOptions.node];
+      let iconBack = this.iconOptions.icons[icon];
       return iconBack;
     } else {
       return './img/1x1TransShim.gif';

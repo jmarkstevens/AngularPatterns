@@ -71,21 +71,19 @@ const basicIcon3Btn = {
   styles: [require('./button-page.css')]
 })
 export class ButtonPage {
-  constructor() {
-    this.basicBtn = basicBtn;
-    this.basicBtn18 = basicBtn18;
-    this.basicBtn24 = basicBtn24;
-    this.basicBtn30 = basicBtn30;
-    this.basicBtn40 = basicBtn40;
-    this.basicBtnAssign = basicBtnAssign;
-    this.basicBtnCst = basicBtnCst;
-    this.basicBackImgBtn = basicBackImgBtn;
-    this.basicBackImg2Btn = basicBackImg2Btn;
-    this.basicIcon1Btn = basicIcon1Btn;
-    this.basicIcon2Btn = basicIcon2Btn;
-    this.basicIcon3Btn = basicIcon3Btn;
-    this.clicked = 'not clicked';
-  }
+  basicBtn = basicBtn;
+  basicBtn18 = basicBtn18;
+  basicBtn24 = basicBtn24;
+  basicBtn30 = basicBtn30;
+  basicBtn40 = basicBtn40;
+  basicBtnAssign = basicBtnAssign;
+  basicBtnCst = basicBtnCst;
+  basicBackImgBtn = basicBackImgBtn;
+  basicBackImg2Btn = basicBackImg2Btn;
+  basicIcon1Btn = basicIcon1Btn;
+  basicIcon2Btn = basicIcon2Btn;
+  basicIcon3Btn = basicIcon3Btn;
+  clicked = 'not clicked';
 
   clickHandler = btnObject => {
     this.clicked = 'clickHandler buttonid: ' + btnObject.buttonid;

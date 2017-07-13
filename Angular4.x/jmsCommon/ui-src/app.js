@@ -10,6 +10,8 @@ import './img/snow.ico';
 import './img/flow.png';
 import './img/1x1TransShim.gif';
 import './img/SLogoS5-48_C.png';
+import './img/chevron-down.png';
+import './img/chevron-right.png'
 
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
@@ -24,7 +26,7 @@ import {AppComponent} from './components/app-component';
 
 import {store} from './store/App.Store';
 
-import {apiGetAppData, apiGetImageList, apiGetTreeView, apiGetInputData, apiGetPicList} from './store/api/api.Actions';
+import {apiGetImageList, apiGetTreeView, apiGetInputData, apiGetPicList} from './store/api/api.Actions';
 
 @NgModule({
   imports: [
@@ -45,10 +47,10 @@ AppModule.parameters = [
   [NgRedux]
 ];
 
-// store.dispatch(apiGetAppData());
 store.dispatch(apiGetImageList());
-// store.dispatch(apiGetTreeView());
+store.dispatch(apiGetTreeView());
 store.dispatch(apiGetInputData());
 store.dispatch(apiGetPicList());
+
 
 platformBrowserDynamic().bootstrapModule(AppModule);

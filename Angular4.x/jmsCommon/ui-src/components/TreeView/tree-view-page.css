@@ -1,1 +1,11 @@
-.rootDiv {color: yellow; text-align: center;}
+.rootDiv {
+  background-color: DarkSlateGray;
+  color: Khaki;
+  display: flex;
+  height: 100%;
+  margin: 20px auto;
+  max-width: 1366px;
+  padding: 20px;
+  text-align: left;
+}
+.treeColumns {width: 50%;}

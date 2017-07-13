@@ -38,7 +38,16 @@ export function apiGetTreeView() {
   return (dispatch) => {
     fetch('/routes/getTreeView')
       .then((response) => response.json())
-      .then((json) => dispatch({type: 'GetTreeViewDone', payload: json}));
+      .then((json) => dispatch({type: 'GetTreeViewDone', payload: json}))
+      .then(dispatch(apiGetTreeViewState()));
+  };
+}
+
+export function apiGetTreeViewState() {
+  return (dispatch) => {
+    fetch('/routes/getTreeViewState')
+      .then((response) => response.json())
+      .then((json) => dispatch({type: 'GetTreeViewStateDone', payload: json}));
   };
 }
 
@@ -52,4 +61,8 @@ export function apiSetInputData(data) {
 
 export function apiSetTreeView(data) {
   fetch('/routes/setTreeView', {method: 'POST', headers: jsonHeader, body: JSON.stringify(data)});
+}
+
+export function apiSetTreeViewState(data) {
+  fetch('/routes/setTreeViewState', {method: 'POST', headers: jsonHeader, body: JSON.stringify(data)});
 }

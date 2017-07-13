@@ -1,0 +1,11 @@
+<div class="rootDiv">
+  Selected item title: {{currentItem.title}}
+  <br /><br />
+  <jms-tree-view
+    [treeList]="treeList"
+    [iconOptions]="iconOptions"
+    [tvState]="tvState"
+    [titleColors]="titleColors"
+    (onItemSelected)="onItemSelected($event)">
+  </jms-tree-view>
+</div>

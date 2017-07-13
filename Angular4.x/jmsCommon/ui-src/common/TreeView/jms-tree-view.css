@@ -1,1 +1,21 @@
-.rootDiv {color: yellow; text-align: center;}
+.treeRoot {
+}
+
+.listRow {
+  display: flex;
+  margin: 5px 0;
+}
+.titleDiv {
+  color: PaleGoldenrod;
+}
+
+.showChildren {
+  height: 1em;
+  margin-right: .6em;
+  width: 1em;
+}
+
+.childrenDiv {
+  margin-left: 26px;
+  padding: 0;
+}

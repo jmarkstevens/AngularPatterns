@@ -1,18 +1,16 @@
 import {Component, ChangeDetectorRef} from '@angular/core';
 import {NgRedux} from '@angular-redux/store';
 
-import {saveTreeState, setCurrentItem, treeActions} from '../../store/treeview/tree.Actions';
-
 @Component({
-  selector: 'tree-view-page',
-  template: require('./tree-view-page.html'),
-  styles: [require('./tree-view-page.css')]
+  selector: 'tree-menu',
+  template: require('./tree-menu.html'),
+  styles: [require('./tree-menu.css')]
 })
-export class TreeViewPage {
+export class TreeMenu implements OnDestroy {
   currentItem = {};
-  iconOptions = {icons: {dev: './img/sun.ico', sys: './img/leaf.ico', home: './img/snow.ico'}, node: 'type'};
+  iconOptions = {icons: {0: './img/chevron-right.png', 1: './img/chevron-down.png'}, node: 'showChildren'};
   titleColors = {normal: 'Wheat', selected: 'Aquamarine'};
-  tvState = {};
+  tvState = {id: 'nodeid', selected: '', showChildren: {}};
   
   constructor(changeDetectorRef, ngRedux) {
     this.changeDetectorRef = changeDetectorRef;
@@ -26,16 +24,15 @@ export class TreeViewPage {
   }
 
   onItemSelected = item => {
-    this.ngRedux.dispatch(setCurrentItem(item));
-    this.ngRedux.dispatch(saveTreeState(this.tvState));
+    this.currentItem = item;
+    // this.tvState.selected = item[this.tvState.id];
+    this.changeDetectorRef.detectChanges();
   }
-
+  
   subscribeToState = first => {
     this.treeList = this.ngRedux.getState().treeState.treeData;
-    this.tvState = this.ngRedux.getState().treeState.tvState;
-    this.currentItem = this.ngRedux.getState().treeState.currentTreeNode;
     let isCurrentPage = this.ngRedux.getState().appState.currentPage === 'TreeViewPage';
     if (!first && isCurrentPage) this.changeDetectorRef.detectChanges();
   }
 }
-TreeViewPage.parameters = [[ChangeDetectorRef], [NgRedux]];
+TreeMenu.parameters = [[ChangeDetectorRef], [NgRedux]];

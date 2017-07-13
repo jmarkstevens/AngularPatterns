@@ -1,22 +1,20 @@
-
-export function setClippetsTree() { return {type: 'SetClippetsTree'}; }
-
-export function selectTreeNode(node) { return {type: 'SelectTreeNode', node}; }
-
-export function setTreeNodeClosed(node) { return {type: 'SetTreeNodeClosed', node}; }
-
-export function saveTreeEdit(node) { return {type: 'SaveTreeEdit', node}; }
+import {apiSetTreeViewState} from '../api/api.Actions';
 
 export function saveTreeNew(node, location) { return {type: 'SaveTreeNew', node, location}; }
 
-export function treeActions(action) {
+export function saveTreeEdit(node) { return {type: 'SaveTreeEdit', node}; }
+
+export function saveTreeState(payload) {
+  return (dispatch) => {
+    dispatch({type: 'SaveTreeState', payload});
+    apiSetTreeViewState(payload);
+  };
+}
+export function setCurrentItem(item) { return {type: 'SetCurrentItem', item}; }
+export function treeActions(action, node) {
   switch (action) {
-    case 'new': return {type: 'ShowNew'};
-    case 'edit': return {type: 'ShowEdit'};
-    case 'moveUp': return {type: 'MoveUp'};
-    case 'moveDown': return {type: 'MoveDown'};
-    case 'remove': return {type: 'Remove'};
-    case 'cancelEdit': return {type: 'CancelEdit'};
-    case 'cancelNew': return {type: 'CancelNew'};
+    case 'moveUp': return {type: 'MoveUp', node};
+    case 'moveDown': return {type: 'MoveDown', node};
+    case 'remove': return {type: 'Remove', node};
   }
 }
