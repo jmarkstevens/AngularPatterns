@@ -30,15 +30,15 @@ function _saveTreeNew(_treeData, treeNode, location, tvState) {
   let newNode = treeNode;
   let nodeIndex = _getNodeIndex(_treeData, tvState.selected);
 
-  let nextNodeID = parseInt(tvState.nextid) + 1;
-  tvState.nextid = nextNodeID.toString();
+  let nextNodeID = tvState.nextid + 1;
+  tvState.nextid = nextNodeID;
   let newNodeID;
   if (location == 'saveNewChild') {
-    newNodeID = tvState.selected + '.' + nextNodeID;
+    newNodeID = tvState.selected + '.' + nextNodeID.toString();
   } else {
     let nodeIdArray = tvState.selected.split('.');
     nodeIdArray.pop();
-    newNodeID = nodeIdArray.join('.') + '.' + nextNodeID;
+    newNodeID = nodeIdArray.join('.') + '.' + nextNodeID.toString();
   }
   newNode.nodeid = newNodeID;
 

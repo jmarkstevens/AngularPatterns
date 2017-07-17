@@ -15,6 +15,7 @@ export class TooltipContent implements AfterViewChecked {
     window.setTimeout(() => _this.setLeftTop(_this), 500);
   }
   setLeftTop = (_this) => {
+    if (document.getElementById("contentOuter") === null) return;
     let height = document.getElementById("contentOuter").offsetHeight;
     let windowHeight = window.innerHeight;
     let xPos = _this.xPos;

@@ -1,4 +1,14 @@
 <div class="Tooltip">
-  <span id="helpTip" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave()">&nbsp;?&nbsp;</span>
-  <tooltip-content [inData]="inData" [xPos]="xPos" [adjust]="adjust" *ngIf="showTip"></tooltip-content>
+  <span
+    id="helpTip"
+    (mouseenter)="onMouseEnter($event)"
+    (mouseleave)="onMouseLeave()"
+    [ngStyle]="{cursor: 'pointer'}"
+  >&nbsp;?&nbsp;</span>
+  <tooltip-content
+    [inData]="inData"
+    [xPos]="xPos"
+    [adjust]="adjust"
+    *ngIf="showTip"
+  ></tooltip-content>
 </div>
