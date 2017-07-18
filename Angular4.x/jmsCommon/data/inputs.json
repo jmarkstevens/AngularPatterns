@@ -1,10 +1,10 @@
 {
   "text": "regular text some",
-  "textFocus": "edited focused",
+  "textFocus": "text with",
   "checkbox": true,
   "radioGroup": "set",
   "color": "#671c79",
   "number": "28",
-  "range": "32",
+  "range": "28",
   "folder": "C:\\fakepath\\JMarkStevensResume5.docx"
 }

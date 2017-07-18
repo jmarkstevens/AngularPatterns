@@ -43,7 +43,6 @@ export class jmsSingleSlider implements OnInit, OnChanges {
   
   onCircleMouseDown = () => {
     this.dragging = true;
-    console.log('onCircleMouseDown');
   }
   onDragging = event => {
     if (this.dragging) this.onCountClick(event);

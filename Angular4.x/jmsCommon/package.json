@@ -13,8 +13,8 @@
   },
   "scripts": {
     "start": "nodemon --watch js js/server.js",
-    "ww": "webpack --progress --profile --colors --env.noMinimize --watch",
-    "nw": "webpack --progress --profile --colors --env.noMinimize"
+    "ww": "webpack --config wp/wp.config.js --progress --profile --colors --env.noMinimize --watch",
+    "nw": "webpack --config wp/wp.config.js --progress --profile --colors --env.noMinimize"
   },
   "dependencies": {
     "body-parser": "latest",

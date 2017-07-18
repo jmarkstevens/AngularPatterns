@@ -40,8 +40,6 @@ router.get('/getInputData', function(req, res) {
   getSetData.getData('inputs', getDataDone);
 });
 
-router.post('/setInputData', function(req) {
-  getSetData.setData('inputs', req.body, null);
-});
+router.post('/setInputData', function(req) { getSetData.setData('inputs', req.body); });
 
 module.exports = router;
