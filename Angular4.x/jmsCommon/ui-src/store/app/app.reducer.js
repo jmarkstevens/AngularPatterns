@@ -5,14 +5,17 @@ const pages = [
   'GalleryPage',
   'InputPage',
   'ListPage',
+  'ModalPage',
   'PageIndicatorPage',
   'ProgressBarPage',
   'SliderPage',
   'TooltipPage',
   'TreeViewPage'
 ];
+const randomPage = Math.floor(Math.random() * pages.length);
+
 const initialAppState = {
-  currentPage: pages[10]
+  currentPage: pages[randomPage]
 };
 
 export default function handleActions(state = initialAppState, action) {

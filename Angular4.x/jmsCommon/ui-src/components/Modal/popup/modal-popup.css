@@ -1,0 +1,10 @@
+.ModalPopup {
+  background-color: Moccasin;
+  color: DarkGreen;
+  left: 60px;
+  padding: 30px;
+  position: fixed;
+  text-align: center;
+  top: 60px;
+  width: 500px;
+}

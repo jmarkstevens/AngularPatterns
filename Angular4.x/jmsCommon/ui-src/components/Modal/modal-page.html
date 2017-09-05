@@ -1,0 +1,7 @@
+<div class='ModalPage'>
+  <jms-button [btn]="openBtn" (onBtnClicked)="showPopupModal = !showPopupModal"></jms-button>
+
+  <jms-modal [(visible)]="showPopupModal">
+    <modal-popup (onClicked)="onClicked()"></modal-popup>
+  </jms-modal>
+</div>

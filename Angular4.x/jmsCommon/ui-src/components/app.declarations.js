@@ -7,6 +7,8 @@ import {DropDownSelect} from './DropDown/select/dd-select';
 import {GalleryPage} from './Gallery/gallery-page';
 import {InputPage} from './Input/input-page';
 import {ListPage} from './List/list-page';
+import {ModalPage} from './Modal/modal-page';
+import {ModalPopup} from './Modal/popup/modal-popup';
 import {PageIndicatorPage} from './PageIndicator/page-indicator-page';
 import {ProgressBarPage} from './ProgressBar/progress-bar-page';
 import {SliderPage} from './Slider/slider-page';
@@ -27,6 +29,8 @@ export const APP_DECLARATIONS = [
   GalleryPage,
   InputPage,
   ListPage,
+  ModalPage,
+  ModalPopup,
   PageIndicatorPage,
   ProgressBarPage,
   SliderPage,

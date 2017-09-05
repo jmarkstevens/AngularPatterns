@@ -1,0 +1,4 @@
+<div [@modal] *ngIf="visible" class="jmsModal">
+  <ng-content></ng-content>
+</div>
+<div *ngIf="visible" class="modal-overlay" (click)="close()"></div>

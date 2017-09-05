@@ -7,6 +7,7 @@ import {jmsGalleryHelp} from './Gallery/help/jms-gallery-help';
 
 import {jmsInput} from './Input/jms-input';
 import {jmsList} from './List/jms-list';
+import {jmsModal} from './Modal/jms-modal';
 import {jmsPageIndicator} from './PageIndicator/jms-page-indicator';
 import {jmsProgressBar} from './ProgressBar/jms-progress-bar';
 import {jmsRangeSlider} from './RangeSlider/jms-range-slider';
@@ -22,6 +23,7 @@ export const COMMON_DECLARATIONS = [
   jmsGalleryHelp,
   jmsInput,
   jmsList,
+  jmsModal,
   jmsPageIndicator,
   jmsProgressBar,
   jmsRangeSlider,

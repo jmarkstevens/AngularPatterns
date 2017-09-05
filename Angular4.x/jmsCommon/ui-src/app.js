@@ -15,6 +15,7 @@ import './img/chevron-right.png'
 
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {NgReduxModule, NgRedux} from '@angular-redux/store';
 import {SharedModule} from './shared/shared.module';
@@ -30,7 +31,7 @@ import {apiGetImageList, apiGetTreeView, apiGetInputData, apiGetPicList} from '.
 
 @NgModule({
   imports: [
-    BrowserModule, CommonModule, NgReduxModule, SharedModule
+    BrowserModule, BrowserAnimationsModule, CommonModule, NgReduxModule, SharedModule
   ],
   declarations: [
     AppComponent, APP_DECLARATIONS
