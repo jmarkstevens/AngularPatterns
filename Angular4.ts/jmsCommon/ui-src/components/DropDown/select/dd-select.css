@@ -1,0 +1,15 @@
+.DropDownSelect {
+  font-size: 1.2em;
+  padding: 2px 2px 0 0;
+  position: absolute;
+  right: 0px;
+  text-align: right;
+  top: 0px;
+  width: 100%;
+}
+
+.rootDiv {
+  min-height: 300px;
+  position: relative;
+  width: 100%;
+}

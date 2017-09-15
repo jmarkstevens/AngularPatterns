@@ -1,0 +1,7 @@
+<div class="rootDiv">
+  <div id="DropDownMenu" class="DropDownMenu">
+    <jms-dd-multi [options]="options" (onChanged)="clickHandler($event, testID)"></jms-dd-multi>
+  </div>
+  <br /><br /> optionsID: {{optionsID}}<br /><br /> Values: <span *ngFor="let selected of selectedValues">{{selected}} </span>
+  <br /><br /><br />
+</div>

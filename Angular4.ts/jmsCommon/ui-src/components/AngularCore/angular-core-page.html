@@ -1,0 +1,19 @@
+<div class="rootDiv FlexBoxJustAround">
+  <ul>
+    <li *ngFor="let option of options"> Label: {{option.label}} </li>
+  </ul>
+  <ul>
+    <li *ngFor="let option of options; let i = index"> Index: {{i | number:"2.0-0"}} Label: {{option.label}} </li>
+  </ul>
+  <ul>
+    <li *ngFor="let option of options; let i = index" class="monoFont">
+      Index: {{i + " " | rpad: 3: "&nbsp;"}}&nbsp;Label: {{option.label}}
+    </li>
+  </ul>
+  <ul class="ulPlain">
+    <li *ngFor="let option of options">
+      <span *ngIf="option.label; else elseBlock">{{option.label}}</span>
+      <ng-template #elseBlock>&nbsp;</ng-template>
+    </li>
+  </ul>
+</div>
